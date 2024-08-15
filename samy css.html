@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samyflix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo Global */
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Estilo do Header */
+        header {
+            background: linear-gradient(90deg, #7f00ff, #e100ff);
+            padding: 20px 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideInDown 1s ease-out;
+            color: #fff;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo da Seção Chamada */
+        .chamada {
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 900px;
+            background: rgba(36, 59, 85, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .chamada-texto h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
+            letter-spacing: 2px;
+        }
+
+        .chamada-texto p {
+            font-size: 1.7rem;
+            color: #f5c518;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 100%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo da Seção Categoria */
+        .categoria {
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 1200px;
+            background: rgba(36, 59, 85, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out 0.5s;
+        }
+
+        .categoria h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #f5c518;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            animation: pulse 1.5s infinite 0.5s;
+        }
+
+        .categoria-videos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .categoria-videos a {
+            flex-basis: calc(25% - 20px);
+            max-width: 270px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .categoria-videos a:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .categoria-videos img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .categoria-videos img:hover {
+            opacity: 0.8;
+        }
+
+        /* Estilo Responsivo */
+        @media (max-width: 1024px) {
+            .categoria-videos a {
+                flex-basis: calc(33.33% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .categoria-videos a {
+                flex-basis: calc(50% - 20px);
+            }
+
+            .chamada-texto h1 {
+                font-size: 3rem;
+            }
+
+            .chamada-texto p {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categoria-videos a {
+                flex-basis: 100%;
+            }
+
+            .chamada-texto h1 {
+                font-size: 2.5rem;
+            }
+
+            .chamada-texto p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>samyflix</header>
+
+    <section class="chamada">
+        <div class="chamada-texto">
+            <h1>ATRAVÉS DO ARANHAVERSO</h1>
+            <p>Homem Aranha</p>
+        </div>
+
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gt_fAE1Eg2Q?si=EEv-tsY_b1B2OwKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="categoria">
+        <h2>Jesus é o caminho, a verdade e a vida</h2>
+        <div class="categoria-videos">
+            <a href="https://youtu.be/jsslJMxhMA0?si=951es7un9krkSvp5">
+                <img src="https://img.youtube.com/vi/jsslJMxhMA0/maxresdefault.jpg" alt="Video 1" />
+            </a>
+            <a href="https://youtu.be/pu9H4T6MvtY?si=AusYniwhRJSfFvTH">
+                <img src="https://img.youtube.com/vi/pu9H4T6MvtY/maxresdefault.jpg" alt="Video 2" />
+            </a>
+            <a href="https://youtu.be/-hWZ0EPlkPE?si=gvoCP-9ihffQV3Wz">
+                <img src="https://img.youtube.com/vi/-hWZ0EPlkPE/sd2.jpg" alt="Video 3" />
+            </a>
+            <a href="https://youtu.be/WtHH6KG1p80?si=tZaCTxNRxmVhLmch">
+                <img src="https://img.youtube.com/vi/WtHH6KG1p80/maxresdefault.jpg" alt="Video 4" />
+            </a>
+            <a href="https://youtu.be/fG_45ZmQB5g?si=rFPh9VVyWJPN9990">
+                <img src="https://img.youtube.com/vi/fG_45ZmQB5g/maxresdefault.jpg" alt="Video 5" />
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>
