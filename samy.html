@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>SamyFlix</title>
+    <style>
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(138, 43, 226, 0.8)), url('https://img.youtube.com/vi/WtHH6KG1p80/maxresdefault.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(138, 43, 226, 0.9);
+            padding: 20px 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            position: relative;
+            animation: slideInDown 1s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .chamada {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.85);
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .chamada-texto h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .chamada-texto p {
+            font-size: 1.5rem;
+            color: #f5c518;
+            font-weight: 500;
+        }
+
+        iframe {
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .categoria {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.85);
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out 0.5s;
+        }
+
+        .categoria h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f5c518;
+            font-weight: 600;
+            animation: pulse 1.5s infinite 0.5s;
+        }
+
+        .categoria-videos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .categoria-videos a {
+            flex-basis: calc(33% - 10px);
+            max-width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .categoria-videos a:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .categoria-videos img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .categoria-videos img:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .categoria-videos a {
+                flex-basis: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categoria-videos a {
+                flex-basis: 100%;
+            }
+
+            .chamada-texto h1 {
+                font-size: 2.5rem;
+            }
+
+            .chamada-texto p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>SamyFlix</header>
+
+    <section class="chamada">
+        <div class="chamada-texto">
+            <h1>Através do Aranhaverso</h1>
+            <p>homem-aranha</p>
+        </div>
+
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gt_fAE1Eg2Q?si=EEv-tsY_b1B2OwKE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="categoria">
+        <h2>Hebreus 10:26-31 Pois, se continuarmos a pecar de propósito, depois de conhecer a verdade, já não há mais sacrifício que possa tirar os nossos pecados. Pelo contrário, resta apenas o medo do que acontecerá: medo do Julgamento e do fogo violento que destruirá os que são contra Deus.
+        </h2>
+        <div class="categoria-videos">
+            <a href="https://youtu.be/jsslJMxhMA0?si=951es7un9krkSvp5">
+                <img src="https://img.youtube.com/vi/jsslJMxhMA0/maxresdefault.jpg" alt="Vídeo 1">
+            </a>
+            <a href="https://youtu.be/pu9H4T6MvtY?si=AusYniwhRJSfFvTH">
+                <img src="https://img.youtube.com/vi/pu9H4T6MvtY/maxresdefault.jpg" alt="Vídeo 2">
+            </a>
+            <a href="https://youtu.be/-hWZ0EPlkPE?si=gvoCP-9ihffQV3Wz">
+                <img src="https://img.youtube.com/vi/-hWZ0EPlkPE/sd2.jpg" alt="Vídeo 3">
+            </a>
+            <a href="https://youtu.be/WtHH6KG1p80?si=tZaCTxNRxmVhLmch">
+                <img src="https://img.youtube.com/vi/WtHH6KG1p80/maxresdefault.jpg" alt="Vídeo 4">
+            </a>
+            <a href="https://youtu.be/fG_45ZmQB5g?si=Xh6EEzM9bPHKaGQr">
+                <img src="https://img.youtube.com/vi/fG_45ZmQB5g/maxresdefault.jpg" alt="Vídeo 5">
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
